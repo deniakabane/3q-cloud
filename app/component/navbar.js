@@ -147,7 +147,7 @@ export default function Navbar() {
       </Drawer>
 
       {/* Desktop Navbar */}
-      <div className="hidden z-30 md:flex justify-between items-center px-16 bg-core fixed h-[79.4px] top-0 left-0 w-full">
+      <div className="hidden z-20 md:flex justify-between items-center px-16 bg-core sticky h-[79.4px] top-0 left-0 w-full">
         <div className="flex items-center">
           <Link href="/">
             <Image
