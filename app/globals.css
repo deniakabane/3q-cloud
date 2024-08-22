@@ -29,3 +29,13 @@ body {
     text-wrap: balance;
   }
 }
+.hapus-icon-swiper {
+  .swiper-button-next:after,
+  .swiper-rtl .swiper-button-prev:after {
+    display: none;
+  }
+  .swiper-button-prev:after,
+  .swiper-rtl .swiper-button-prev:after {
+    display: none;
+  }
+}

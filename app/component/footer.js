@@ -68,6 +68,12 @@ export default function Footer() {
               >
                 Tentang Kami
               </Link>
+              <Link
+                href="/kebijakan"
+                className="mb-2 font-medium text-black hover:underline"
+              >
+                Kebijakan
+              </Link>
             </div>
             <div className="flex items-center text-3xl gap-2 text-black">
               <Link href="/">
@@ -132,6 +138,7 @@ export default function Footer() {
           <Link href="/gallery">Galeri</Link>
           <Link href="/artikel">Artikel</Link>
           <Link href="/aboutus">Tentang Kami</Link>
+          <Link href="/kebijakan">Kebijakan</Link>
         </div>
         <p className="my-4">
           Jl. Jendral Sudirman No 60 Sempur Kec Bogor Tengah Kota Bogor
