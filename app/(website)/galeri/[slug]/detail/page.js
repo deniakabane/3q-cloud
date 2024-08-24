@@ -10,42 +10,44 @@ export async function generateMetadata({ params, searchParams }, parent) {
 }
 
 const galeriItemsPage = [
-  {
-    image: "/img/galeri1.png",
-    title: "Lombok",
-  },
-  {
-    image: "/img/galeri.png",
-    title: "Gili",
-  },
-  {
-    image: "/img/galeri3.png",
-    title: "Labon Bajo",
-  },
-  {
-    image: "/img/galeri4.png",
-    title: "Bali",
-  },
-  {
-    image: "/img/galeri5.png",
-    title: "Gili",
-  },
-  {
-    image: "/img/galeri6.png",
-    title: "Labon Bajo",
-  },
-];
+    {
+      image: "/img/galeri1.png",
+      title: "Lombok",
+      date : "27 May 2015",
+    },
+    {
+      image: "/img/galeri.png",
+      title: "Gili",
+      date : "27 May 2014",
+    },
+    {
+      image: "/img/galeri3.png",
+      title: "Labon Bajo",
+      date : "27 Maret 2014",
+    },
+    {
+      image: "/img/galeri4.png",
+      title: "Bali",
+      date : "27 April 2014",
+    },
+    {
+      image: "/img/galeri5.png",
+      title: "Gili",
+      date : "27 May 2014",
+    },
+    {
+      image: "/img/galeri6.png",
+      title: "Labon Bajo",
+      date : "27 May 2014",
+    },
+  ];
+
 const Page = async ({}) => {
   return (
     <>
-      <div className="bg-white py-10">
+     <div className="bg-white py-10">
         <div className="px-16 pb-4">
-          <h1 className="text-3xl text-bold pb-2 text-[#333]">
-            Momen 3Q Cloud Trip
-          </h1>
-          <p className="text-base pb-2 text-[#333]">
-            Liburan untuk menjadikan pengalaman Anda menyenangkan di Indonesia!
-          </p>
+        
         </div>
         <div className="px-16 bg-[#F2F5F9] py-8 mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
@@ -60,11 +62,7 @@ const Page = async ({}) => {
                   height={300}
                   className="w-full h-[300px] object-cover rounded-xl"
                 />
-                <div className="absolute inset-0 flex items-end justify-center">
-                  <span className="text-white text-lg font-semibold px-6 py-2 mb-5 bg-black bg-opacity-40 rounded">
-                    {item.title}
-                  </span>
-                </div>
+              
               </div>
               </Link>
             ))}
