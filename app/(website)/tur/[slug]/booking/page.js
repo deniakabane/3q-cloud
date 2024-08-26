@@ -55,23 +55,24 @@ const Page = () => {
   };
 
   return (
-    <Box p={5} display="flex" gap={5}>
+    <>
+    <Box p={"4rem"} display="flex" gap={"2rem"}>
       {/* Div Kiri (70%) */}
       <Box w="70%">
         {/* Date Selection Form */}
-        <FormControl mb={4}>
-          <FormLabel>Pilih Tanggal Keberangkatan</FormLabel>
+        <FormControl mb={"5rem"}>
+          <FormLabel paddingBottom={10}>Pilih Jadwal</FormLabel>
           <Menu>
             <MenuButton
               as={Button}
               rightIcon={<ChevronDownIcon />}
-              borderRadius="md"
+              borderRadius="8px"
               borderWidth={1}
               borderColor="gray.300"
               justifyContent="space-between"
-              padding={4}
+              padding={10}
               variant="outline"
-              width="full"
+              width="100%"
               textAlign="left"
             >
               <Box display="flex" alignItems="center" width="full">
@@ -193,7 +194,9 @@ const Page = () => {
           <Text mb={4}><strong>Total Harga Setelah Diskon:</strong> {formatCurrency(finalPrice)}</Text>
         </Box>
       </Box>
-    </Box>
+    </Box> 
+    </>
+   
   );
 };
 

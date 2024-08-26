@@ -63,7 +63,7 @@ export default function Footer() {
                 Artikel
               </Link>
               <Link
-                href="/aboutus"
+                href="/tentangkami"
                 className="mb-2 font-medium text-black hover:underline"
               >
                 Tentang Kami
