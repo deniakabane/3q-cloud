@@ -22,6 +22,7 @@ import {
   AddIcon,
   MinusIcon,
 } from "@chakra-ui/icons";
+import Link from "next/link";
 
 // Helper function for formatting numbers
 const formatCurrency = (amount) => {
@@ -365,7 +366,6 @@ const Page = () => {
                     borderRadius={"100px"}
                     backgroundColor={"#EFEFEF"}
                   >
-                   
                     {childCount}
                   </Text>
                   <Text>Anak (3-15 Tahun)</Text>
@@ -420,24 +420,29 @@ const Page = () => {
                 <Text className="text-base">{formatCurrency(totalPrice)}</Text>
               </div>
               {discount > 0 && (
-              <div className="flex justify-between">
-                <Text className="text-base font-medium">{voucherCode || null}</Text>
-                <Text className="text-base"> {formatCurrency(discount)}</Text>
-              </div>
+                <div className="flex justify-between">
+                  <Text className="text-base font-medium">
+                    {voucherCode || null}
+                  </Text>
+                  <Text className="text-base"> {formatCurrency(discount)}</Text>
+                </div>
               )}
-             
             </div>
 
             <div className="py-5 px-8">
               <div className="flex justify-between pb-8">
                 <Text className="text-xl font-bold">Total Tagihan</Text>
-                <Text className="text-xl font-bold"> {formatCurrency(finalPrice)}</Text>
+                <Text className="text-xl font-bold">
+                  {" "}
+                  {formatCurrency(finalPrice)}
+                </Text>
               </div>
-            <Button href="/app/(transaksi)/formPemesanan/page.js" className="w-full py-3 bg-textcore text-white text-base font-bold rounded-md">Selanjutnya</Button>
+              <Link href="/formPemesanan">
+                <Button className="w-full py-3 bg-textcore text-white text-base font-bold rounded-md">
+                  Selanjutnya
+                </Button>
+              </Link>
             </div>
-
-            
-          
           </Box>
         </Box>
       </Box>
