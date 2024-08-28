@@ -195,6 +195,7 @@ export default function Navbar() {
                 className="w-10 h-10 rounded-full object-cover"
                 width={40}
                 height={40}
+                href="../(website)/profile/page.js"
               />
             ) : (
               <FaUserCircle className="text-2xl bg-slate-500 rounded-xl text-white" />

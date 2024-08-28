@@ -10,12 +10,5 @@ import {
 import Footer from "../component/footer";
 export const revalidate = 60;
 export default function WebsiteLayout({ children }) {
-  return (
-    <section>
-
-      {children}
-   
-     
-    </section>
-  );
+  return <section>{children}</section>;
 }
