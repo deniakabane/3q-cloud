@@ -201,7 +201,7 @@ export default function Navbar() {
               ) : (
                 <FaUserCircle className="text-2xl bg-slate-500 mr-2 rounded-xl text-white" />
               )}
-              <div className="text-sm ml-2">Fahmi Zulmeindar</div>
+              <div className="text-sm font-bold ml-2">Fahmi Zulmeindar</div>
             </Link>
           </div>
         </div>
