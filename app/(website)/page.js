@@ -12,33 +12,26 @@ import Ulasan from "../component/home/ulasan";
 export default function HomePage() {
   return (
     <>
-      <div className="px-16 pb-4">
+      <div className="md:px-16 pb-4">
         <SwiperComponent />
         <Paket />
         <CtaMenu />
-        <div className="flex-col text-center">
-          <h1 className="text-4xl font-bold pb-2">Galeri</h1>
-          <p className="text-xl font-normal">
+        <div className="flex-col text-center md:px-0 px-5 ">
+          <h1 className="md:text-4xl text-2xl font-bold pb-2">Galeri</h1>
+          <p className="md:text-xl text-base font-normal">
             Liburan untuk menjadikan pengalaman Anda menyenangkan di Indonesia!
           </p>
           <Galeri />
         </div>
-       
       </div>
       <Cta
         url="/"
         title="Melarikan diri sejenak dari rutinitas, menemukan keindahan baru di setiap sudut. Liburan singkat, tapi kenangan bertahan selamanya. "
         textButton="Konsultasi"
       />
-      
-         
-          
-          <Artikel />
-          <Ulasan />
-      
-       
-       
-       
+
+      <Artikel />
+      <Ulasan />
     </>
   );
 }

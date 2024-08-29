@@ -39,10 +39,10 @@ const Page = async ({}) => {
 
   return (
     <>
-      <div className="px-16 bg-white">
-        <div className="mx-auto py-10 bg-white">
-          <h1 className="text-[28px] font-bold pb-4">Tujuan Populer</h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-6">
+      <div className="md:px-16 px-6 bg-white">
+        <div className="mx-auto md:py-10 py-6 bg-white">
+          <h1 className="md:text-[28px] text-2xl font-bold pb-4">Tujuan Populer</h1>
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-6 md:gap-6 gap-3">
             {populerItems.map((item, i) => (
               <div key={i} className="relative">
                 <Image
@@ -53,7 +53,7 @@ const Page = async ({}) => {
                   className="w-full h-[209px] object-cover rounded-xl"
                 />
                 <div className="absolute inset-0 flex items-end justify-center">
-                  <span className="text-white text-lg font-semibold px-6 py-2 mb-5 bg-black bg-opacity-40 rounded">
+                  <span className="text-white md:text-lg text-sm font-semibold px-6 py-2 mb-5 bg-black bg-opacity-40 rounded">
                     {item.title}
                   </span>
                 </div>

@@ -19,7 +19,7 @@ export default function SwiperComponent() {
 
   return (
     <div className="relative hapus-icon-swiper">
-      <div className="pr-10">
+      <div className="md:pr-10 pr-2">
       <Swiper
         spaceBetween={20}
         slidesPerView={4}
@@ -32,6 +32,16 @@ export default function SwiperComponent() {
           prevEl: ".swiper-button-prev",
         }}
         modules={[Autoplay, Navigation]}
+        breakpoints={{
+          // Breakpoint untuk mobile
+          0: {
+            slidesPerView: 2, // Hanya 2 slide per view di layar kecil
+          },
+          // Breakpoint untuk layar lebih besar
+          768: {
+            slidesPerView: 4, // 4 slide per view di layar lebih besar
+          },
+        }}
       >
         {dummyData.map((slider, index) => (
           <SwiperSlide key={index}>

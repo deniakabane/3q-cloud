@@ -27,10 +27,10 @@ const articles = [
 
 export default function Artikel() {
   return (
-    <div className="py-10 bg-white">
-         <h1 className="text-4xl font-bold pb-2 pl-16">Artikel yang bikin semangat liburanmu </h1>
-    <div className="px-5 pt-6 md:px-16">
-      <div className="flex flex-nowrap gap-6 justify-between">
+    <div className="md:py-10 py-6 bg-white">
+         <h1 className="md:text-4xl text-2xl font-bold pb-2 md:pl-16 px-5">Artikel yang bikin semangat liburanmu </h1>
+    <div className="px-5 md:pt-6 pt-3 md:px-16">
+      <div className="md:flex md:flex-nowrap grid grid-cols-2 gap-6 justify-between">
         {articles.map((article, index) => (
           <div
             key={index}
@@ -43,9 +43,9 @@ export default function Artikel() {
               height={217}
               className="w-full h-auto object-cover"
             />
-            <div className="p-4">
-              <div className="text-lg font-semibold">{article.title}</div>
-              <div className="text-sm text-gray-600 mt-2">{article.date}</div>
+            <div className="md:p-4 p-2">
+              <div className="md:text-lg text-sm font-semibold">{article.title}</div>
+              <div className="md:text-sm text-xs text-gray-600 md:mt-2 mt-1">{article.date}</div>
             </div>
           </div>
         ))}

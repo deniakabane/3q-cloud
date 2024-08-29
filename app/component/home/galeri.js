@@ -31,8 +31,8 @@ const galeriItems = [
 
 export default function Galeri() {
   return (
-    <div className="container mx-auto py-10">
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <div className="md:container md:mx-auto md:py-10 py-5">
+    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 md:gap-6 gap-4">
       {galeriItems.map((item, index) => (
         <div key={index} className="relative">
           <Image
@@ -40,10 +40,10 @@ export default function Galeri() {
             alt={item.title}
             width={400}
             height={300}
-            className="w-full h-[300px] object-cover rounded-xl"
+            className="w-full md:h-[300px] h-[200px] object-cover rounded-xl"
           />
           <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-white text-lg font-semibold px-6 py-2 bg-black bg-opacity-60 rounded">
+            <span className="text-white md:text-lg text-sm font-semibold px-6 py-2 bg-black bg-opacity-60 rounded">
               {item.title}
             </span>
           </div>

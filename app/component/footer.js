@@ -124,8 +124,8 @@ export default function Footer() {
       <div className="md:hidden">
         <div className="text-center mx-auto mb-4">
           <Image
-            src="/logohub.png"
-            title="logo hasanahub"
+            src="/logo_foot.png"
+            title="logo 3q"
             className="h-[60px] w-[60px] mx-auto"
             width={100}
             height={100}

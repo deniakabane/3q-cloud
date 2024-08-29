@@ -41,7 +41,7 @@ const ulasanData = [
 export default function Ulasan() {
   return (
     <>
-      <div className="bg-core px-5 py-6 md:bg-[#F7F7F7] md:px-16 md:py-10">
+      <div className="px-5 py-6 bg-[#F7F7F7] md:px-16 md:py-10">
         <h1 className="text-xl md:pb-5 md:pl-2 md:text-4xl  pb-2 mb-3 font-bold">
           Ulasan Terbaik
         </h1>
@@ -68,9 +68,9 @@ export default function Ulasan() {
         >
           {ulasanData.map((ar, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white md:mx-2 md:px-5 md:py-10 md:rounded-lg shadow-md flex flex-col h-full">
+              <div className="bg-white p-5 md:mx-2 md:px-5 md:py-10 rounded-lg md:shadow-md flex flex-col h-full">
                 <div className="flex-grow">
-                  <p className="py-1 md:text-base">{ar.description}</p>
+                  <p className="md:py-1 pb-0 md:text-base text-sm">{ar.description}</p>
                 </div>
                 <div className="flex items-center mt-3">
                   <div className="w-[65px]">

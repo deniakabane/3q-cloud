@@ -77,110 +77,236 @@ const facilitiesNotIncluded = [
 const Page = async ({}) => {
   return (
     <>
-      <div className="flex px-16 py-10 gap-5">
-        <div className="w-[70%] pr-4">
-          <div className="flex flex-col gap-5 pb-5">
-            <div>
-              <h1 className="font-bold text-3xl pb-3">Bali 4 Hari 3 Malam</h1>
+      <div className="md:hidden">
+        <div className="flex flex-col p-6 gap-2">
+            <div className="flex flex-col gap-4">
+              <div>
+                <h1 className="font-bold text-2xl">Bali 4 Hari 3 Malam</h1>
+              </div>
+              <div className="w-full">
+                <SwiperComponent />
+              </div>
+              <div className="bg-[#EFEFEF66] rounded-md p-4">
+                <p className="text-base ">
+                  Perjalanan ini adalah kombinasi sempurna antara petualangan,
+                  relaksasi, dan pembelajaran budaya. Bali memiliki sesuatu
+                  untuk semua orang, baik itu pantai yang indah, budaya yang
+                  kaya, atau kuliner yang menggugah selera. Saya sangat
+                  merekomendasikan travel ini bagi siapa pun yang ingin
+                  mengeksplorasi keindahan dan keunikan Bali.
+                </p>
+              </div>
             </div>
-            <div className="w-full">
-              <SwiperComponent />
+            <div className="my-1">
+              <div className="bg-textcore px-5 py-3 rounded-t-md">
+                <h1 className="text-2xl text-center font-bold text-white">itinerary</h1>
+              </div>
+              <div className="p-4 border border-[#F3F3F3] rounded-b-md">
+                <Accordion defaultIndex={[1]} allowMultiple>
+                  {dummyData.map((item, index) => (
+                    <AccordionItemComponent
+                      key={index}
+                      title={item.title}
+                      description={item.description}
+                      details={item.details}
+                    />
+                  ))}
+                </Accordion>
+              </div>
             </div>
-            <div className="bg-[#EFEFEF66] rounded-md p-4">
-              <p className="text-base ">
-                Perjalanan ini adalah kombinasi sempurna antara petualangan,
-                relaksasi, dan pembelajaran budaya. Bali memiliki sesuatu untuk
-                semua orang, baik itu pantai yang indah, budaya yang kaya, atau
-                kuliner yang menggugah selera. Saya sangat merekomendasikan
-                travel ini bagi siapa pun yang ingin mengeksplorasi keindahan
-                dan keunikan Bali.
-              </p>
-            </div>
-          </div>
-          <div className="my-5">
-            <div className="bg-textcore p-5 rounded-t-md">
-              <h1 className="text-2xl font-bold text-white">itinerary</h1>
-            </div>
-            <div className="py-8 px-6 border border-[#F3F3F3] rounded-b-md">
-              <Accordion defaultIndex={[1]} allowMultiple>
-                {dummyData.map((item, index) => (
-                  <AccordionItemComponent
-                    key={index}
-                    title={item.title}
-                    description={item.description}
-                    details={item.details}
-                  />
+            <div className="my-1">
+              <div className="bg-textcore px-5 py-3 rounded-t-md">
+                <h1 className="text-2xl text-center  font-bold text-white">
+                  Fasilitas Termasuk
+                </h1>
+              </div>
+              <div className="p-4 border border-[#F3F3F3] rounded-b-md">
+                {facilitiesIncluded.map((item, index) => (
+                  <div key={index} className="flex mb-2 items-center">
+                    <div className="w-[20px] mr-2">
+                      <FaCircleCheck className="text-green-600" />
+                    </div>
+                    <div className="-mt-[3px] text-base">{item}</div>
+                  </div>
                 ))}
-              </Accordion>
+              </div>
             </div>
-          </div>
-          <div className="my-5">
-            <div className="bg-textcore p-5 rounded-t-md">
-              <h1 className="text-2xl font-bold text-white">Fasilitas Termasuk</h1>
-            </div>
-            <div className="py-8 px-6 border border-[#F3F3F3] rounded-b-md">
-              {facilitiesIncluded.map((item, index) => (
-                <div key={index} className="flex mb-2 items-center">
-                  <div className="w-[24px] mr-2">
-                    <FaCircleCheck className="text-green-600" />
+            <div className="my-1">
+              <div className="bg-textcore px-5 py-3 rounded-t-md">
+                <h1 className="text-2xl font-bold text-center text-white">
+                  Fasilitas Tidak Termasuk
+                </h1>
+              </div>
+              <div className="p-5 border border-[#F3F3F3] rounded-b-md">
+                {facilitiesNotIncluded.map((item, index) => (
+                  <div key={index} className="flex mb-2 items-center">
+                    <div className="w-[20px] mr-2">
+                      <FaCircleXmark className="text-red-600" />
+                    </div>
+                    <div className="-mt-[3px] text-base">{item}</div>
                   </div>
-                  <div className="-mt-[3px] text-xl">{item}</div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-          <div className="my-5">
-            <div className="bg-textcore p-5 rounded-t-md">
-              <h1 className="text-2xl font-bold text-white">Fasilitas Tidak Termasuk</h1>
-            </div>
-            <div className="py-8 px-6 border border-[#F3F3F3] rounded-b-md">
-              {facilitiesNotIncluded.map((item, index) => (
-                <div key={index} className="flex mb-2 items-center">
-                  <div className="w-[24px] mr-2">
-                    <FaCircleXmark className="text-red-600" />
-                  </div>
-                  <div className="-mt-[3px] text-xl">{item}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="my-5">
-            <div className="bg-textcore p-5 rounded-t-md">
-              <h1 className="text-2xl font-bold text-white">Ketentuan</h1>
-            </div>
-            <div className="py-8 px-10 border border-[#F3F3F3] rounded-b-md">
-              <ul className="font-bold text-xl list-disc">
-                <li className="mb-2">Pembayaran full</li>
-                <li className="mb-2">Cancel H-1 Pembayaran Hangus</li>
+            <div className="my-1">
+              <div className="bg-textcore px-5 py-3 rounded-t-md">
+                <h1 className="text-2xl font-bold text-center text-white">Ketentuan</h1>
+              </div>
+              <div className="py-2 px-10 border border-[#F3F3F3] rounded-b-md">
+                <ul className="font-bold text-xl list-disc">
+                  <li className="mb-1 text-base">Pembayaran full</li>
+                  <li className="mb-1 text-base">Cancel H-1 Pembayaran Hangus</li>
 
-                <li className="mb-2">Cancel H-1 Pembayaran Hangus</li>
+                  <li className="mb-1 text-base">Cancel H-1 Pembayaran Hangus</li>
 
-                <li className="mb-2">Cancel H-1 Pembayaran Hangus</li>
-              </ul>
+                  <li className="mb-1 text-base">Cancel H-1 Pembayaran Hangus</li>
+                </ul>
+              </div>
+            </div>
+         
+          <div className=" ">
+            <div className="sticky top-[120px] z-10">
+              <div className="flex flex-col p-4 gap-4 rounded-t-[21px] border border-textcore border-b-transparent">
+                <div className="pb-1">
+                  <h2 className="font-bold text-2xl">Daftar </h2>
+                </div>
+                <div className="px-4 py-5 flex justify-between rounded-lg font-semibold bg-[#F3F3F3]">
+                  <div>Dewasa</div>
+                  <div>Rp. 3.200.000</div>
+                </div>
+                <div className="px-4 py-5 flex justify-between rounded-lg font-semibold bg-[#F3F3F3]">
+                  <div>Anak (2-10 Tahun)</div>
+                  <div>Rp. 3.200.000</div>
+                </div>
+              </div>
+              <div className="p-4 border-t border-[#E8EAEA] rounded-b-[21px] border-x border-x-textcore border-b border-b-textcore">
+                <Link
+                  href="/tur/${id}/booking"
+                  className="py-4 w-full text-white flex justify-center bg-textcore rounded-lg font-bold text-base"
+                >
+                  <Button className=" text-white bg-textcore rounded-lg font-bold text-base">
+                    Booking
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-        <div className="w-[30%] ">
-          <div className="sticky top-[120px] z-10">
-            <div className="flex flex-col p-4 gap-4 rounded-t-[21px] border border-textcore border-b-transparent">
-              <div className="pb-1">
-                <h2 className="font-bold text-2xl">Daftar </h2>
+      </div>
+
+      <div className="hidden md:block">
+        <div className="flex px-16 py-10 gap-5">
+          <div className="w-[70%] pr-4">
+            <div className="flex flex-col gap-5 pb-5">
+              <div>
+                <h1 className="font-bold text-3xl pb-3">Bali 6 Hari 3 Malam</h1>
               </div>
-              <div className="px-4 py-5 flex justify-between rounded-lg font-semibold bg-[#F3F3F3]">
-                <div>Dewasa</div>
-                <div>Rp. 3.200.000</div>
+              <div className="w-full">
+                <SwiperComponent />
               </div>
-              <div className="px-4 py-5 flex justify-between rounded-lg font-semibold bg-[#F3F3F3]">
-                <div>Anak (2-10 Tahun)</div>
-                <div>Rp. 3.200.000</div>
+              <div className="bg-[#EFEFEF66] rounded-md p-4">
+                <p className="text-base ">
+                  Perjalanan ini adalah kombinasi sempurna antara petualangan,
+                  relaksasi, dan pembelajaran budaya. Bali memiliki sesuatu
+                  untuk semua orang, baik itu pantai yang indah, budaya yang
+                  kaya, atau kuliner yang menggugah selera. Saya sangat
+                  merekomendasikan travel ini bagi siapa pun yang ingin
+                  mengeksplorasi keindahan dan keunikan Bali.
+                </p>
               </div>
             </div>
-            <div className="p-4 border-t border-[#E8EAEA] rounded-b-[21px] border-x border-x-textcore border-b border-b-textcore">
-            <Link href="/tur/${id}/booking" className="py-4 w-full text-white flex justify-center bg-textcore rounded-lg font-bold text-base">
-              <Button className=" text-white bg-textcore rounded-lg font-bold text-base">
-                Booking
-              </Button>
-              </Link>
+            <div className="my-5">
+              <div className="bg-textcore p-5 rounded-t-md">
+                <h1 className="text-2xl font-bold text-white">itinerary</h1>
+              </div>
+              <div className="py-8 px-6 border border-[#F3F3F3] rounded-b-md">
+                <Accordion defaultIndex={[1]} allowMultiple>
+                  {dummyData.map((item, index) => (
+                    <AccordionItemComponent
+                      key={index}
+                      title={item.title}
+                      description={item.description}
+                      details={item.details}
+                    />
+                  ))}
+                </Accordion>
+              </div>
+            </div>
+            <div className="my-5">
+              <div className="bg-textcore p-5 rounded-t-md">
+                <h1 className="text-2xl font-bold text-white">
+                  Fasilitas Termasuk
+                </h1>
+              </div>
+              <div className="py-8 px-6 border border-[#F3F3F3] rounded-b-md">
+                {facilitiesIncluded.map((item, index) => (
+                  <div key={index} className="flex mb-2 items-center">
+                    <div className="w-[24px] mr-2">
+                      <FaCircleCheck className="text-green-600" />
+                    </div>
+                    <div className="-mt-[3px] text-xl">{item}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="my-5">
+              <div className="bg-textcore p-5 rounded-t-md">
+                <h1 className="text-2xl font-bold text-white">
+                  Fasilitas Tidak Termasuk
+                </h1>
+              </div>
+              <div className="py-8 px-6 border border-[#F3F3F3] rounded-b-md">
+                {facilitiesNotIncluded.map((item, index) => (
+                  <div key={index} className="flex mb-2 items-center">
+                    <div className="w-[24px] mr-2">
+                      <FaCircleXmark className="text-red-600" />
+                    </div>
+                    <div className="-mt-[3px] text-xl">{item}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="my-5">
+              <div className="bg-textcore p-5 rounded-t-md">
+                <h1 className="text-2xl font-bold text-white">Ketentuan</h1>
+              </div>
+              <div className="py-8 px-10 border border-[#F3F3F3] rounded-b-md">
+                <ul className="font-bold text-xl list-disc">
+                  <li className="mb-2">Pembayaran full</li>
+                  <li className="mb-2">Cancel H-1 Pembayaran Hangus</li>
+
+                  <li className="mb-2">Cancel H-1 Pembayaran Hangus</li>
+
+                  <li className="mb-2">Cancel H-1 Pembayaran Hangus</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="w-[30%] ">
+            <div className="sticky top-[120px] z-10">
+              <div className="flex flex-col p-4 gap-4 rounded-t-[21px] border border-textcore border-b-transparent">
+                <div className="pb-1">
+                  <h2 className="font-bold text-2xl">Daftar </h2>
+                </div>
+                <div className="px-4 py-5 flex justify-between rounded-lg font-semibold bg-[#F3F3F3]">
+                  <div>Dewasa</div>
+                  <div>Rp. 3.200.000</div>
+                </div>
+                <div className="px-4 py-5 flex justify-between rounded-lg font-semibold bg-[#F3F3F3]">
+                  <div>Anak (2-10 Tahun)</div>
+                  <div>Rp. 3.200.000</div>
+                </div>
+              </div>
+              <div className="p-4 border-t border-[#E8EAEA] rounded-b-[21px] border-x border-x-textcore border-b border-b-textcore">
+                <Link
+                  href="/tur/${id}/booking"
+                  className="py-4 w-full text-white flex justify-center bg-textcore rounded-lg font-bold text-base"
+                >
+                  <Button className=" text-white bg-textcore rounded-lg font-bold text-base">
+                    Booking
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

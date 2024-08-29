@@ -64,11 +64,11 @@ export default function Navbar() {
   return (
     <>
       {/* Mobile Navbar */}
-      <div className="md:hidden h-[60px] bg-core z-30 flex fixed left-0 top-0 w-full items-center px-4 justify-between">
+      <div className="md:hidden h-[60px] bg-core z-40 flex sticky left-0 top-0 w-full items-center px-4 justify-between">
         <div>
           <Link href="/">
             <Image
-              src="/logohub.png"
+              src="/logo.png"
               title="logo hasanahub"
               className="h-[60px] w-[60px] -mt-[2px]"
               width={100}
@@ -79,10 +79,10 @@ export default function Navbar() {
         </div>
         <div>
           <Button
-            className="mr-3 flex items-center text-xs bg-semicore text-white py-2 px-3 rounded-lg"
+            className="mr-3 flex items-center text-xs bg-textcore text-white py-2 px-3 rounded-lg"
             onClick={handleWhatsAppClick}
           >
-            <AiOutlineWhatsApp className=" text-[16px] mr-1" /> Hubungi Kami
+            <AiOutlineWhatsApp className=" text-[16px] mr-1" /> Konsultasi
           </Button>
           <Button onClick={isOpen ? onClose : onOpen}>
             {isOpen ? (
@@ -98,7 +98,7 @@ export default function Navbar() {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerBody>
-            <div className="bg-white min-h-screen px-4 ">
+            <div className="bg-white z-50 min-h-screen px-4 ">
               <div className="py-4 w-full flex items-center">
                 <div>
                   <Image
@@ -131,7 +131,7 @@ export default function Navbar() {
                     <div
                       className={`${
                         pathname === dt.url
-                          ? "bg-semicore text-white font-bold"
+                          ? "bg-buttoncore   text-white font-bold"
                           : "bg-core"
                       } flex items-center p-3 rounded-lg font-bold hover:bg-semicore hover:text-white`}
                     >
@@ -147,7 +147,7 @@ export default function Navbar() {
       </Drawer>
 
       {/* Desktop Navbar */}
-      <div className="hidden z-20 md:flex justify-between items-center px-16 bg-core sticky h-[79.4px] top-0 left-0 w-full">
+      <div className="hidden z-40 md:flex justify-between items-center px-16 bg-core sticky h-[79.4px] top-0 left-0 w-full">
         <div className="flex items-center">
           <Link href="/">
             <Image

@@ -14,7 +14,7 @@ const AccordionItemComponent = ({ title, description, details }) => {
             borderRadius="md"
             justifyContent="space-between"
           >
-            <Box fontSize={"20px"} as="span" flex="1" textAlign="center">
+            <Box className="text-sm md:text-xl" as="span" flex="1" textAlign="center">
               {title}
             </Box>
           </AccordionButton>
@@ -31,13 +31,13 @@ const AccordionItemComponent = ({ title, description, details }) => {
             display="flex"
             alignItems="center"
           >
-            <Box fontSize={"20px"} as="span" flex="1" paddingLeft={10} textAlign="left">
+            <Box className="text-sm md:text-xl" as="span" flex="1" paddingLeft={10} textAlign="left">
               {description}
             </Box>
             <AccordionIcon fontSize={'27px'} />
           </AccordionButton>
           <AccordionPanel pb={4} pl={6}>
-            <ul className="list-disc px-10 py-5 flex flex-col gap-2 text-lg">
+            <ul className="list-disc md:px-10 px-7 py-5 flex flex-col gap-2 md:text-lg text-sm">
               {details.map((detail, index) => (
                 <li key={index}>{detail}</li>
               ))}
