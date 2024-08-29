@@ -90,16 +90,16 @@ export default function List() {
   });
 
   return (
-    <div className="py-10 px-16 bg-gray-50">
+    <div className="md:py-10 md:px-16 p-6 bg-gray-50">
       <div className="mx-auto">
         {/* Header dengan Text dan Button Filter */}
-        <div className="flex justify-between mb-8">
-          <h2 className="text-[28px] font-bold pb-2">38 Tour Tersedia</h2>
+        <div className="flex justify-between items-center md:mb-8 mb-6">
+          <h2 className="md:text-[28px] text-2xl font-bold ">38 Tour Tersedia</h2>
           <button
-            className="flex items-center text-base bg-[#00429B] text-white px-4 py-2 rounded-md"
+            className="flex items-center md:text-base text-sm bg-[#00429B] text-white md:px-4 px-3 py-2 rounded-md"
             onClick={handleFilterClick}
           >
-            <FaFilter className="mr-3" />
+            <FaFilter className="mr-3"/>
             FILTER
           </button>
         </div>
@@ -175,7 +175,7 @@ export default function List() {
         )}
 
         {/* Card Packages */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-8 gap-4">
           {sortedPackages.map((pkg, i) => (
             <Link key={i} href="/tur/1">
               <div className="bg-white rounded-lg overflow-hidden">
@@ -184,31 +184,31 @@ export default function List() {
                   alt={pkg.title}
                   width={299}
                   height={199}
-                  className="w-full h-auto object-cover"
+                  className="w-full md:h-40 h-32 object-cover"
                 />
                 <div className="p-4">
-                  <div className="text-lg font-bold text-textcore">
+                  <div className="md:text-lg text-base font-semibold text-textcore">
                     {pkg.title}
                   </div>
-                  <div className="flex flex-col mt-1.5">
-                    <div className="text-sm text-gray-600">Start from</div>
-                    <div className="text-xl font-bold text-textcore">
+                  <div className="flex flex-col mt-1 md:mt-2 md:space-y-1">
+                    <div className="text-xs text-gray-600">Start from</div>
+                    <div className="md:text-xl text-lg font-bold text-textcore">
                       {pkg.price}/Pax
                     </div>
                   </div>
-                  <div className="mt-2 text-sm text-gray-600">Include:</div>
+                  <div className="md:mt-4 mt-1 text-sm text-gray-600">Include:</div>
                   <div className="flex flex-row mt-2 gap-2">
                     {pkg.includes.map((item, idx) => (
                       <div
                         key={idx}
-                        className="flex items-center justify-center w-8 h-8 bg-[#00FFFF] text-white rounded-lg"
+                        className="flex items-center justify-center md:w-8 md:h-8 w-6 h-6 bg-[#00FFFF] text-white rounded-lg"
                       >
-                        {item === "Hotel" && <FaHotel className="text-lg" />}
+                        {item === "Hotel" && <FaHotel className="md:text-lg text-sm" />}
                         {item === "Transportasi" && (
-                          <FaSuitcase className="text-lg" />
+                          <FaSuitcase className="md:text-lg text-sm" />
                         )}
-                        {item === "Makan" && <FaUtensils className="text-lg" />}
-                        {item === "Tour" && <FaPlane className="text-lg" />}
+                        {item === "Makan" && <FaUtensils className="md:text-lg text-sm" />}
+                        {item === "Tour" && <FaPlane className="md:text-lg text-sm" />}
                       </div>
                     ))}
                   </div>

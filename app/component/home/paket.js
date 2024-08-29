@@ -32,9 +32,9 @@ const packages = [
 
 export default function Paket() {
   return (
-    <div className="py-10">
-      <div className="container mx-auto">
-        <div className="flex flex-nowrap gap-10 justify-between">
+    <div className="md:py-10 py-5">
+      <div className="md:container md:mx-auto mx-4 ">
+        <div className="md:flex md:flex-nowrap md:gap-10 grid grid-cols-2 gap-4 justify-between">
           {packages.map((pkg, index) => (
             <div
               key={index}
@@ -45,25 +45,25 @@ export default function Paket() {
                 alt={pkg.title}
                 width={256}
                 height={160}
-                className="w-full h-40 object-cover"
+                className="w-full md:h-40 h-32 object-cover"
               />
               <div className="p-4">
-                <div className="text-lg font-semibold">{pkg.title}</div>
-                <div className="flex flex-col mt-2 space-y-1">
+                <div className="md:text-lg text-base font-semibold">{pkg.title}</div>
+                <div className="flex flex-col md:mt-2 md:space-y-1">
                   <div className="text-sm text-gray-600">Start from</div>
-                  <div className="text-xl font-bold">{pkg.price}/Pax</div>
+                  <div className="md:text-xl text-lg font-bold">{pkg.price}/Pax</div>
                 </div>
-                <div className="mt-4 text-sm text-gray-600">Include:</div>
+                <div className="md:mt-4 mt-1 text-sm text-gray-600">Include:</div>
                 <div className="flex flex-row mt-2 gap-2">
                   {pkg.includes.map((item, idx) => (
                     <div
                       key={idx}
-                      className="flex items-center justify-center w-8 h-8 bg-[#00FFFF] text-white rounded-lg"
+                      className="flex items-center justify-center md:w-8 md:h-8 w-6 h-6 bg-[#00FFFF] text-white rounded-lg"
                     >
-                      {item === "Hotel" && <FaHotel className="text-lg" />}
-                      {item === "Transportasi" && <FaSuitcase className="text-lg" />}
-                      {item === "Makan" && <FaUtensils className="text-lg" />}
-                      {item === "Tour" && <FaPlane className="text-lg" />}
+                      {item === "Hotel" && <FaHotel className="md:text-lg text-sm" />}
+                      {item === "Transportasi" && <FaSuitcase className="md:text-lg text-sm" />}
+                      {item === "Makan" && <FaUtensils className="md:text-lg text-sm" />}
+                      {item === "Tour" && <FaPlane className="md:text-lg text-sm" />}
                     </div>
                   ))}
                 </div>

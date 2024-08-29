@@ -34,7 +34,7 @@ export default function SwiperComponent({ data = dummyData }) {
             <Image
               src={slider?.image?.url_file}
               title={slider?.title || "No title available"}
-              className="w-full h-auto mt-10"
+              className="w-full h-auto md:t-10"
               width={2560}
               height={314}
               alt={slider?.title || "No title available"}
