@@ -188,20 +188,20 @@ export default function Navbar() {
             <div className="w-px bg-gray-400 h-8 ml-3 mr-5"></div>
 
             {/* User Icon/Image */}
-            <Link href="/profile">
+            <Link href="/profile" className="flex  items-center">
               {dummyUser ? (
                 <Image
                   src={dummyUser}
                   alt="user"
-                  className="w-10 h-10 rounded-full object-cover"
+                  className="w-10 h-10 rounded-full mr-2 object-cover"
                   width={40}
                   height={40}
                   href="../(website)/profile/page.js"
                 />
               ) : (
-                <FaUserCircle className="text-2xl bg-slate-500 rounded-xl text-white" />
+                <FaUserCircle className="text-2xl bg-slate-500 mr-2 rounded-xl text-white" />
               )}
-              <div className="text-sm ml-2">Farhan_</div>
+              <div className="text-sm ml-2">Fahmi Zulmeindar</div>
             </Link>
           </div>
         </div>
