@@ -193,13 +193,13 @@ export default function Navbar() {
                 <Image
                   src={dummyUser}
                   alt="user"
-                  className="w-10 h-10 rounded-full mr-2 object-cover"
+                  className="w-10 h-10 rounded-full mr-1 object-cover"
                   width={40}
                   height={40}
                   href="../(website)/profile/page.js"
                 />
               ) : (
-                <FaUserCircle className="text-2xl bg-slate-500 mr-2 rounded-xl text-white" />
+                <FaUserCircle className="text-2xl bg-slate-500 mr-1 rounded-xl text-white" />
               )}
               <div className="text-sm font-bold ml-2">Fahmi Zulmeindar</div>
             </Link>
