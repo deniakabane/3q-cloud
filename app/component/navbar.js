@@ -186,21 +186,23 @@ export default function Navbar() {
           <div className="flex items-center">
             {/* Divider */}
             <div className="w-px bg-gray-400 h-8 ml-3 mr-5"></div>
-            
+
             {/* User Icon/Image */}
-            {dummyUser ? (
-              <Image
-                src={dummyUser}
-                alt="user"
-                className="w-10 h-10 rounded-full object-cover"
-                width={40}
-                height={40}
-                href="../(website)/profile/page.js"
-              />
-            ) : (
-              <FaUserCircle className="text-2xl bg-slate-500 rounded-xl text-white" />
-            )}
-            <div className="text-sm ml-2">Farhan_</div>
+            <Link href="/profile">
+              {dummyUser ? (
+                <Image
+                  src={dummyUser}
+                  alt="user"
+                  className="w-10 h-10 rounded-full object-cover"
+                  width={40}
+                  height={40}
+                  href="../(website)/profile/page.js"
+                />
+              ) : (
+                <FaUserCircle className="text-2xl bg-slate-500 rounded-xl text-white" />
+              )}
+              <div className="text-sm ml-2">Farhan_</div>
+            </Link>
           </div>
         </div>
       </div>
