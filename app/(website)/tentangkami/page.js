@@ -38,7 +38,7 @@ const Page = () => {
           <Image
             src={dataTentangKami?.image.url_file}
             title={dataTentangKami?.title}
-            className="w-full h-[300px] md:h-[400px] object-cover object-bottom"
+            className="w-full h-[250px] md:h-[400px] object-cover object-bottom"
             width={321}
             height={196}
             priority
@@ -46,7 +46,7 @@ const Page = () => {
           />
         </div>
         <div className="md:w-[60%]">
-          <div className="py-3 px-5">
+          <div className="md:py-3 pt-5 pb-4 px-6">
             <h1 className="text-lg font-bold md:text-3xl">
               {dataTentangKami?.title}
             </h1>
@@ -54,7 +54,7 @@ const Page = () => {
               {dataTentangKami?.description}
             </p>
           </div>
-          <div className="pb-4 px-5 md:pt-5">
+          <div className="pb-4 px-6 md:pt-5">
             <h1 className="text-lg font-bold md:text-3xl">
               {dataTentangKami?.titleAlamat}
             </h1>
@@ -62,7 +62,7 @@ const Page = () => {
               {dataTentangKami?.descriptionAlamat}
             </p>
           </div>
-          <div className="pb-4 px-5 md:pt-5">
+          <div className="md:pb-4 pb-8   px-6 md:pt-5">
             <h1 className="text-lg font-bold md:text-3xl">
               {dataTentangKami?.titleKontak}
             </h1>

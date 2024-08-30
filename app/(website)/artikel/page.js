@@ -55,17 +55,17 @@ const articlesItems = [
 const Page = async ({}) => {
   return (
     <>
-      <div className="py-10 bg-white">
-        <div className="pb-4 pl-16">
-          <h1 className="text-4xl pb-2 font-bold">
-            Artikel yang bikin semangat liburanmu{" "}
+      <div className="md:py-10 py-5 bg-white">
+        <div className="pb-4 md:pl-16 pl-6">
+          <h1 className="md:text-4xl text-xl pb-2 font-bold">
+            Artikel yang bikin semangat liburanmu
           </h1>
-          <p className="text-base pb-2 text-[#333]">
+          <p className="md:text-base text-sm pb-2 text-[#333]">
             Liburan untuk menjadikan pengalaman Anda menyenangkan di Indonesia!
           </p>
         </div>
-        <div className="px-5 py-8 bg-[#F2F5F9] md:px-16">
-          <div className="flex flex-wrap gap-6 justify-between">
+        <div className="py-8 bg-[#F2F5F9] md:px-16 px-4">
+          <div className="md:flex md:flex-wrap md:gap-6 grid grid-cols-2 gap-3 justify-between">
             {articlesItems.map((article, index) => (
               <div
                 key={index}
@@ -77,11 +77,11 @@ const Page = async ({}) => {
                     alt={article.title}
                     width={300}
                     height={217}
-                    className="w-full h-[217px] object-cover"
+                    className="w-full md:h-[217px] h-auto object-cover"
                   />
-                  <div className="py-4">
-                    <div className="text-lg font-semibold">{article.title}</div>
-                    <div className="text-sm text-gray-600 mt-2">
+                  <div className="md:py-4 py-2 px-2">
+                    <div className="md:text-lg text-sm font-semibold">{article.title}</div>
+                    <div className="md:text-sm text-xs text-gray-600 md:mt-2 mt-1">
                       {article.date}
                     </div>
                   </div>

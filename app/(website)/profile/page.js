@@ -76,12 +76,12 @@ const ProfilePage = () => {
             flexDirection="column"
             justifyContent="space-between"
           >
-            <div className="border border-[#E5E5E5] p-10 rounded-[10px]">
+            <div className="border border-[#E5E5E5] md:p-10 p-6 rounded-[10px]">
               <VStack align="start" spacing={4} mb={"3rem"}>
                 <Text fontWeight="bold" fontSize="24px" paddingBottom={"15px"}>
                   Profile
                 </Text>
-                <div className="w-full flex gap-8 py-5">
+                <div className="w-full flex md:gap-8 gap-4 md:py-5 py-2">
                   {/* Left Column */}
                   <Box
                     display="flex"
@@ -183,38 +183,38 @@ const ProfilePage = () => {
             flexDirection="column"
             justifyContent="space-between"
           >
-            <div className="border border-[#E5E5E5] p-8 rounded-[10px]">
+            <div className="border border-[#E5E5E5] p-4 md:p-8 rounded-[10px]">
               <VStack align="start" spacing={4} mb={"3rem"}>
-                <Text fontWeight="bold" fontSize="24px" paddingBottom={"24px"}>
+                <Text fontWeight="bold" className="md:pb-6 md:text-2xl text-xl pb-3">
                   Riwayat Pemesanan
                 </Text>
                 <div className="w-full flex flex-col gap-3">
                   {/* Header Row */}
-                  <div className="p-2 font-bold text-lg rounded-md bg-[#F2F5F9] grid grid-cols-[1.5fr_1fr_1fr_1fr] gap-4">
+                  <div className="p-2 font-bold md:text-lg text-sm rounded-md bg-[#F2F5F9] grid md:grid-cols-[1.5fr_1fr_1fr_1fr] grid-cols-[2fr_0.5fr_1fr_0.5fr] gap-4">
                     <div>Tur</div>
-                    <div>Status</div>
-                    <div>Tanggal Pesan</div>
+                    <div className="text-start">Status</div>
+                    <div className="md:pl-0 pl-2">Tanggal Pesan</div>
                     <div className="text-center">Invoice</div>
                   </div>
                   {/* Data Rows */}
                   {orderHistory.map((order) => (
                     <div
                       key={order.id}
-                      className="pb-4 px-2 pt-2 grid grid-cols-[1.5fr_1fr_1fr_1fr] gap-4 border-b border-dashed border-[#8F8F8F] justify-between w-full"
+                      className="pb-4 px-2 pt-2 grid md:grid-cols-[1.5fr_1fr_1fr_1fr] grid-cols-[2fr_0.5fr_1fr_0.5fr] md:gap-4 gap-2 border-b border-dashed border-[#8F8F8F] justify-between w-full"
                     >
                       <div>
                         <Text fontSize={"16px"} fontWeight={600}>
                           {order.tour}
                         </Text>
-                        <Text fontSize={"14px"} fontWeight={400}>
+                        <Text fontSize={"14px"} className="md:pl-0 pl-2" fontWeight={400}>
                           {order.dateRange}
                         </Text>
-                        <span className="flex gap-3 font-normal text-sm">
+                        <span className="flex gap-3 font-normal md:text-sm text-xs">
                           <Text>{order.travelers}</Text>
                         </span>
                       </div>
                       <div
-                        className={`text-sm font-bold ${
+                        className={`md:text-sm text-xs font-bold ${
                           order.status === "Lunas"
                             ? "text-green-500"
                             : "text-red-500"
@@ -222,7 +222,7 @@ const ProfilePage = () => {
                       >
                         {order.status}
                       </div>
-                      <div className="text-sm">{order.orderDate}</div>
+                      <div className="md:text-sm text-xs">{order.orderDate}</div>
                       <div className="text-center">
                         <DownloadIcon />
                       </div>
@@ -295,105 +295,213 @@ const ProfilePage = () => {
   };
 
   return (
-    <Flex
-      height="100vh"
-      padding="4rem"
-      backgroundColor={"#fff"}
-      fontFamily={"montserrat"}
-      gap={"2rem"}
-    >
-      {/* Left Column */}
-      <Box
-        width="30%"
-        display="flex"
-        flexDirection="column"
-        justifyContent="space-between"
-      >
-        <div className="border border-[#E5E5E5] p-8 rounded-[10px]">
-          {/* User Name */}
-          <VStack align="start" spacing={4} mb={"3rem"}>
-            <Text fontWeight="bold" fontSize="24px" paddingBottom={"24px"}>
-              Farhan_
-            </Text>
-
-            {/* Menu Items */}
-            <Flex
-              justifyContent="space-between"
-              alignItems="center"
-              w="100%"
-              pb={7}
-              mb={8}
-              borderBottomWidth={1}
-              borderColor={"#F4F4F4"}
-              cursor="pointer"
-              onClick={() => setSelectedMenu("orders")}
-            >
-              <Text fontSize={"17px"} fontWeight={500}>
-                Riwayat Pemesanan
-              </Text>
-              <ChevronRightIcon fontSize={"20px"} />
-            </Flex>
-
-            <Flex
-              justifyContent="space-between"
-              alignItems="center"
-              w="100%"
-              pb={7}
-              mb={8}
-              borderBottomWidth={1}
-              borderColor={"#F4F4F4"}
-              cursor="pointer"
-              onClick={() => setSelectedMenu("profile")}
-            >
-              <Text fontSize={"17px"} fontWeight={500}>
-                Profile
-              </Text>
-              <ChevronRightIcon fontSize={"20px"} />
-            </Flex>
-
-            <Flex
-              justifyContent="space-between"
-              alignItems="center"
-              w="100%"
-              pb={7}
-              mb={8}
-              borderBottomWidth={1}
-              borderColor={"#F4F4F4"}
-              cursor="pointer"
-              onClick={() => setSelectedMenu("documents")}
-            >
-              <Text fontSize={"17px"} fontWeight={500}>
-                Dokumen
-              </Text>
-              <ChevronRightIcon fontSize={"20px"} />
-            </Flex>
-          </VStack>
-
-          {/* Logout Button */}
-          <Button
-            rightIcon={<FaSignOutAlt fontSize={"20px"} />}
-            colorScheme="red"
-            variant="solid"
-            backgroundColor={"#00429B"}
-            borderRadius={"8px"}
+    <>
+      <div className="md:hidden">
+        <Flex
+          flexDirection={"column"}
+          padding="1.5rem"
+          backgroundColor={"#fff"}
+          fontFamily={"montserrat"}
+          gap={"1rem"}
+        >
+          {/* Left Column */}
+          <Box
             width="100%"
-            p={15}
-            fontSize={"17px"}
-            fontWeight={500}
-            justifyContent={"space-between"}
-            textColor={"#fff"}
-            onClick={() => alert("Logout")}
+            display="flex"
+            flexDirection="column"
+            justifyContent="space-between"
           >
-            Keluar
-          </Button>
-        </div>
-      </Box>
+            <div className="border border-[#E5E5E5] p-6 rounded-[10px]">
+              {/* User Name */}
+              <VStack align="start" spacing={4} mb={"3rem"}>
+                <Text fontWeight="bold" fontSize="24px" paddingBottom={"24px"}>
+                  Farhan_
+                </Text>
 
-      {/* Right Column */}
-      <Box width="70%" p={4}>
-        {renderContent()}
-      </Box>
-    </Flex>
+                {/* Menu Items */}
+                <Flex
+                  justifyContent="space-between"
+                  alignItems="center"
+                  w="100%"
+                  pb={7}
+                  mb={8}
+                  borderBottomWidth={1}
+                  borderColor={"#F4F4F4"}
+                  cursor="pointer"
+                  onClick={() => setSelectedMenu("orders")}
+                >
+                  <Text fontSize={"17px"} fontWeight={500}>
+                    Riwayat Pemesanan
+                  </Text>
+                  <ChevronRightIcon fontSize={"20px"} />
+                </Flex>
+
+                <Flex
+                  justifyContent="space-between"
+                  alignItems="center"
+                  w="100%"
+                  pb={7}
+                  mb={8}
+                  borderBottomWidth={1}
+                  borderColor={"#F4F4F4"}
+                  cursor="pointer"
+                  onClick={() => setSelectedMenu("profile")}
+                >
+                  <Text fontSize={"17px"} fontWeight={500}>
+                    Profile
+                  </Text>
+                  <ChevronRightIcon fontSize={"20px"} />
+                </Flex>
+
+                <Flex
+                  justifyContent="space-between"
+                  alignItems="center"
+                  w="100%"
+                  pb={7}
+                  mb={8}
+                  borderBottomWidth={1}
+                  borderColor={"#F4F4F4"}
+                  cursor="pointer"
+                  onClick={() => setSelectedMenu("documents")}
+                >
+                  <Text fontSize={"17px"} fontWeight={500}>
+                    Dokumen
+                  </Text>
+                  <ChevronRightIcon fontSize={"20px"} />
+                </Flex>
+              </VStack>
+
+              {/* Logout Button */}
+              <Button
+                rightIcon={<FaSignOutAlt fontSize={"20px"} />}
+                colorScheme="red"
+                variant="solid"
+                backgroundColor={"#00429B"}
+                borderRadius={"8px"}
+                width="100%"
+                p={15}
+                fontSize={"17px"}
+                fontWeight={500}
+                justifyContent={"space-between"}
+                textColor={"#fff"}
+                onClick={() => alert("Logout")}
+              >
+                Keluar
+              </Button>
+            </div>
+          </Box>
+
+          {/* Right Column */}
+          <Box width="100%">
+            {renderContent()}
+          </Box>
+        </Flex>
+      </div>
+
+      {/* ini desktop di atas mobile*/}
+      <div className="hidden md:block">
+        {" "}
+        <Flex
+          height="100vh"
+          padding="4rem"
+          backgroundColor={"#fff"}
+          fontFamily={"montserrat"}
+          gap={"2rem"}
+        >
+          {/* Left Column */}
+          <Box
+            width="30%"
+            display="flex"
+            flexDirection="column"
+            justifyContent="space-between"
+          >
+            <div className="border border-[#E5E5E5] p-8 rounded-[10px]">
+              {/* User Name */}
+              <VStack align="start" spacing={4} mb={"3rem"}>
+                <Text fontWeight="bold" fontSize="24px" paddingBottom={"24px"}>
+                  Farhan_
+                </Text>
+
+                {/* Menu Items */}
+                <Flex
+                  justifyContent="space-between"
+                  alignItems="center"
+                  w="100%"
+                  pb={7}
+                  mb={8}
+                  borderBottomWidth={1}
+                  borderColor={"#F4F4F4"}
+                  cursor="pointer"
+                  onClick={() => setSelectedMenu("orders")}
+                >
+                  <Text fontSize={"17px"} fontWeight={500}>
+                    Riwayat Pemesanan
+                  </Text>
+                  <ChevronRightIcon fontSize={"20px"} />
+                </Flex>
+
+                <Flex
+                  justifyContent="space-between"
+                  alignItems="center"
+                  w="100%"
+                  pb={7}
+                  mb={8}
+                  borderBottomWidth={1}
+                  borderColor={"#F4F4F4"}
+                  cursor="pointer"
+                  onClick={() => setSelectedMenu("profile")}
+                >
+                  <Text fontSize={"17px"} fontWeight={500}>
+                    Profile
+                  </Text>
+                  <ChevronRightIcon fontSize={"20px"} />
+                </Flex>
+
+                <Flex
+                  justifyContent="space-between"
+                  alignItems="center"
+                  w="100%"
+                  pb={7}
+                  mb={8}
+                  borderBottomWidth={1}
+                  borderColor={"#F4F4F4"}
+                  cursor="pointer"
+                  onClick={() => setSelectedMenu("documents")}
+                >
+                  <Text fontSize={"17px"} fontWeight={500}>
+                    Dokumen
+                  </Text>
+                  <ChevronRightIcon fontSize={"20px"} />
+                </Flex>
+              </VStack>
+
+              {/* Logout Button */}
+              <Button
+                rightIcon={<FaSignOutAlt fontSize={"20px"} />}
+                colorScheme="red"
+                variant="solid"
+                backgroundColor={"#00429B"}
+                borderRadius={"8px"}
+                width="100%"
+                p={15}
+                fontSize={"17px"}
+                fontWeight={500}
+                justifyContent={"space-between"}
+                textColor={"#fff"}
+                onClick={() => alert("Logout")}
+              >
+                Keluar
+              </Button>
+            </div>
+          </Box>
+
+          {/* Right Column */}
+          <Box width="70%" p={4}>
+            {renderContent()}
+          </Box>
+        </Flex>
+      </div>
+    </>
   );
 };
 

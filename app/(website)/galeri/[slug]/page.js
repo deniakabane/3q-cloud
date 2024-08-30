@@ -45,12 +45,12 @@ const galeriItemsPage = [
 const Page = async ({}) => {
   return (
     <>
-     <div className="bg-white py-10">
-        <div className="px-16 pb-4">
+     <div className="bg-white md:py-10 py-5">
+        <div className="md:px-16 px-6 pb-4">
         
         </div>
-        <div className="px-16 bg-[#F2F5F9] py-8 mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="md:px-16 px-6 bg-[#F2F5F9] py-8 mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
            
             {galeriItemsPage.map((item, index) => (
                <Link key={index} href="/galeri/${id}/detail">
@@ -60,12 +60,12 @@ const Page = async ({}) => {
                   alt={item.title}
                   width={400}
                   height={300}
-                  className="w-full h-[300px] object-cover rounded-xl"
+                  className="w-full md:h-[300px] h-[200px] object-cover rounded-xl"
                 />
-                <div className="absolute inset-0 flex items-end justify-start ml-5">
-                  <div className="text-white px-8 py-2 mb-5 bg-black bg-opacity-40 rounded">
-                    <h1 className=" text-lg font-bold">{item.title}</h1>
-                    <p className=" text-sm">{item.date}</p>
+                <div className="absolute inset-0 flex items-end justify-start md:ml-5 ml-3">
+                  <div className="text-white md:px-8 px-4 py-2 md:mb-5 mb-3 bg-black bg-opacity-40 rounded">
+                    <h1 className="md:text-lg text-sm font-bold">{item.title}</h1>
+                    <p className="md:text-sm text-xs">{item.date}</p>
                   </div>
                 
                 </div>
