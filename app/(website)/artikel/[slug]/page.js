@@ -91,9 +91,9 @@ const Page = async ({ params }) => {
           ></div>
         </div>
       </div>
-      <div className="pt-4"></div>
+      <div className="md:pt-4 pt-0"></div>
       <div className="md:w-[35%]">
-        <div className="mt-5 border-b border-slate-300 md:py-4 md:mx-5 text-[22px] font-bold">Artikel Populer</div>
+        <div className="mt-5 border-b border-slate-300 md:py-4 md:mx-5 mx-6 text-[22px] font-bold">Artikel Populer</div>
         <DetailArtikelRandom slugnya={params.slug} typenya="false" />
       </div>
     </div>

@@ -33,6 +33,8 @@ const packages = [
 export default function Paket() {
   return (
     <div className="md:py-10 py-5">
+       <h1 className="md:text-4xl text-2xl font-bold pb-2 px-5">Explore Destinasi</h1>
+       <p className="md:text-lg text-sm pb-5 px-5">Liburan untuk menjadikan pengalaman Anda menyenangkan di Indonesia!</p>
       <div className="md:container md:mx-auto mx-4 ">
         <div className="md:flex md:flex-nowrap md:gap-10 grid grid-cols-2 gap-4 justify-between">
           {packages.map((pkg, index) => (
@@ -48,10 +50,10 @@ export default function Paket() {
                 className="w-full md:h-40 h-32 object-cover"
               />
               <div className="p-4">
-                <div className="md:text-lg text-base font-semibold">{pkg.title}</div>
+                <div className="md:text-lg text-base text-textcore font-semibold">{pkg.title}</div>
                 <div className="flex flex-col md:mt-2 md:space-y-1">
                   <div className="text-sm text-gray-600">Start from</div>
-                  <div className="md:text-xl text-lg font-bold">{pkg.price}/Pax</div>
+                  <div className="md:text-xl text-lg font-bold text-textcore">{pkg.price}/Pax</div>
                 </div>
                 <div className="md:mt-4 mt-1 text-sm text-gray-600">Include:</div>
                 <div className="flex flex-row mt-2 gap-2">

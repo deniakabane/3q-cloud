@@ -45,13 +45,12 @@ const galeriItemsPage = [
 const Page = async ({}) => {
   return (
     <>
-     <div className="bg-white py-10">
-        <div className="px-16 pb-4">
+     <div className="bg-white md:py-10 py-5">
+        <div className="md:px-16 px-6 pb-4">
         
         </div>
-        <div className="px-16 bg-[#F2F5F9] py-8 mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-           
+        <div className="md:px-16 px-6 bg-[#F2F5F9] py-8 ">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {galeriItemsPage.map((item, index) => (
                <Link key={index} href="/galeri/1">
               <div key={index} className="relative">
@@ -60,9 +59,9 @@ const Page = async ({}) => {
                   alt={item.title}
                   width={400}
                   height={300}
-                  className="w-full h-[300px] object-cover rounded-xl"
+                  className="w-full md:h-[300px] h-[150px] object-cover rounded-xl"
                 />
-              
+            
               </div>
               </Link>
             ))}

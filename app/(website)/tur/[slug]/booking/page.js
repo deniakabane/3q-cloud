@@ -80,7 +80,7 @@ const Page = () => {
     <>
       <div className="md:hidden">
         <Box p={"1.5rem"} display="flex" flexDirection={"column"} gap={"2rem"} backgroundColor={"#fff"}>
-          {/* Div Kiri (70%) */}
+       
           <Box w="100%">
             {/* Date Selection Form */}
             <FormControl mb={"2rem"}>
@@ -326,7 +326,7 @@ const Page = () => {
             </FormControl>
           </Box>
 
-          {/* Div Kanan (30%) */}
+    
           <Box w="100%" top={10}>
             <Box
               borderWidth={1}
@@ -791,12 +791,16 @@ const Page = () => {
                     Kode Voucher
                   </FormLabel>
                   <div className="flex gap-4">
-                    <Input
-                      className="border rounded-md border-gray-200 w-full text-base px-3"
-                      value={voucherCode}
-                      onChange={(e) => setVoucherCode(e.target.value)}
-                    />
-                    <Button className="py-4 px-8 text-white rounded-md bg-textcore text-base">
+                  <Input
+                    placeholder="Masukkan Voucher"
+                    className="border rounded-md border-gray-200 w-full py-3 text-sm px-5"
+                    value={voucherCode}
+                    onChange={(e) => setVoucherCode(e.target.value)}
+                    size="md"
+                    variant="outline"
+                  />
+                 
+                    <Button className="py-1 px-4 text-white rounded-md bg-textcore text-base">
                       Pakai
                     </Button>
                   </div>

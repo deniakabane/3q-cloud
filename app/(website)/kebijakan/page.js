@@ -10,7 +10,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
 const Page = () => {
   return (
     <>
-      <div className="md:Flex-col md:items-start md:justify-between md:p-16 md:gap-5">
+      <div className="md:Flex-col p-6 md:items-start md:justify-between md:p-16 md:gap-5">
         <div className="py-3 kolom-pertama">
           <h1 className="text-lg font-bold md:text-3xl">3Q Cloud Trip</h1>
           <h3 className="text-sm font-medium pt-2 md:text-lg">
@@ -30,7 +30,7 @@ const Page = () => {
           <p className="text-sm pt-2 md:text-base">
             Situs web 3Q Cloud Trip mengumpulkan data pribadi Anda seperti nama,
             alamat, email, nomor telepon, dan nomor KTP. Informasi ini
-            diperlukan untuk memproses dan menyelesaikan pemesanan Anda. <br />{" "}
+            diperlukan untuk memproses dan menyelesaikan pemesanan Anda. <br />
             <br /> Kami juga dapat mengumpulkan data teknis dari perangkat Anda,
             seperti alamat IP, jenis browser, Unique Device Identifier (untuk
             pengguna ponsel), sistem operasi, versi aplikasi, serta informasi

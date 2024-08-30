@@ -69,8 +69,8 @@ export default function Navbar() {
           <Link href="/">
             <Image
               src="/logo.png"
-              title="logo hasanahub"
-              className="h-[60px] w-[60px] -mt-[2px]"
+              title="logo 3Q"
+              className="h-[60px] w-[60px] -mt-[2px] bg-white"
               width={100}
               height={100}
               alt="logo hasanahub"
@@ -78,19 +78,38 @@ export default function Navbar() {
           </Link>
         </div>
         <div>
-          <Button
-            className="mr-3 flex items-center text-xs bg-textcore text-white py-2 px-3 rounded-lg"
-            onClick={handleWhatsAppClick}
-          >
-            <AiOutlineWhatsApp className=" text-[16px] mr-1" /> Konsultasi
-          </Button>
-          <Button onClick={isOpen ? onClose : onOpen}>
-            {isOpen ? (
-              <AiOutlineClose className="text-xl" />
-            ) : (
-              <AiOutlineMenu className="text-xl" />
-            )}
-          </Button>
+          <div className="flex items-center">
+            <Button
+              className="mr-3 flex items-center text-xs bg-textcore text-white py-2 px-3 rounded-lg"
+              onClick={handleWhatsAppClick}
+            >
+              <AiOutlineWhatsApp className=" text-[16px] mr-1" /> Konsultasi
+            </Button>
+
+            <div className="flex items-center">
+              {/* User Icon/Image */}
+              {dummyUser ? (
+                <Image
+                  src={dummyUser}
+                  alt="user"
+                  className="w-10 h-10 rounded-full object-cover"
+                  width={40}
+                  height={40}
+                  href="../(website)/profile/page.js"
+                />
+              ) : (
+                <FaUserCircle className="text-2xl bg-slate-500 rounded-xl text-white" />
+              )}
+              <div className="text-sm ml-2 mr-3">Farhan_</div>
+            </div>
+            <Button onClick={isOpen ? onClose : onOpen}>
+              {isOpen ? (
+                <AiOutlineClose className="text-xl" />
+              ) : (
+                <AiOutlineMenu className="text-xl" />
+              )}
+            </Button>
+          </div>
         </div>
       </div>
 
@@ -186,7 +205,7 @@ export default function Navbar() {
           <div className="flex items-center">
             {/* Divider */}
             <div className="w-px bg-gray-400 h-8 ml-3 mr-5"></div>
-            
+
             {/* User Icon/Image */}
             {dummyUser ? (
               <Image
