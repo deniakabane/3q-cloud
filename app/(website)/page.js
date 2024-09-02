@@ -12,7 +12,7 @@ import Ulasan from "../component/home/ulasan";
 export default function HomePage() {
   return (
     <>
-      <div className="md:px-16 pb-4">
+      <div className="md:px-16 py-5">
         <SwiperComponent />
         <Paket />
         <CtaMenu />
