@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { FaHotel, FaSuitcase, FaPlane, FaUtensils } from "react-icons/fa"; // Contoh ikon, Anda bisa menggunakan ikon lainnya
+
+import HotelIcon from "/public/icon/hoteltur.svg";
+import TransportIcon from "/public/icon/Kopertur.svg"
 
 const packages = [
   {
@@ -60,12 +62,11 @@ export default function Paket() {
                   {pkg.includes.map((item, idx) => (
                     <div
                       key={idx}
-                      className="flex items-center justify-center md:w-8 md:h-8 w-6 h-6 bg-[#00FFFF] text-white rounded-lg"
+                      className="flex items-center justify-center md:w-8 md:h-8 w-6 h-6 bg-[#8ECBDB] rounded-lg"
                     >
-                      {item === "Hotel" && <FaHotel className="md:text-lg text-sm" />}
-                      {item === "Transportasi" && <FaSuitcase className="md:text-lg text-sm" />}
-                      {item === "Makan" && <FaUtensils className="md:text-lg text-sm" />}
-                      {item === "Tour" && <FaPlane className="md:text-lg text-sm" />}
+                      {item === "Hotel" && <Image src={HotelIcon} alt="Hotel Icon" width={20} height={20} />}
+                      {item === "Transportasi" && <Image src={TransportIcon} alt="Transport Icon" width={20} height={20} />}
+                      
                     </div>
                   ))}
                 </div>
