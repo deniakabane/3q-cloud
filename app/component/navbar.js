@@ -80,10 +80,10 @@ export default function Navbar() {
         <div>
           <div className="flex items-center">
             <Button
-              className="mr-3 flex items-center text-xs bg-textcore text-white py-2 px-3 rounded-lg"
+              className="mr-3 flex items-center text-xs bg-textcore text-white py-1.5 px-2 rounded-lg"
               onClick={handleWhatsAppClick}
             >
-              <AiOutlineWhatsApp className=" text-[16px] mr-1" /> Konsultasi
+              <AiOutlineWhatsApp className="text-[14px] mr-1" /> Konsultasi
             </Button>
 
             <div className="flex items-center">
@@ -98,9 +98,9 @@ export default function Navbar() {
                   href="../(website)/profile/page.js"
                 />
               ) : (
-                <FaUserCircle className="text-2xl bg-slate-500 rounded-xl text-white" />
+                <FaUserCircle className="text-2xl bg-slate-500 rounded-xl text-white mr-3" />
               )}
-              <div className="text-sm ml-2 mr-3">Farhan_</div>
+              <div className="text-sm ml-2 mr-3 hidden">Farhan_</div>
             </div>
             <Button onClick={isOpen ? onClose : onOpen}>
               {isOpen ? (

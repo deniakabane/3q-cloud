@@ -450,7 +450,7 @@ const Page = () => {
                 <div className="flex justify-between pb-8">
                   <Text className="text-lg font-bold">Total Tagihan</Text>
                   <Text className="text-lg font-bold">
-                    {" "}
+                   
                     {formatCurrency(finalPrice)}
                   </Text>
                 </div>
@@ -463,7 +463,7 @@ const Page = () => {
               </div>
             </Box>
           </Box>
-          <FormControl mb={40}>
+          {/* <FormControl mb={40}>
             <Box
               display="flex"
               alignItems="center"
@@ -497,9 +497,9 @@ const Page = () => {
                 </div>
               </div>
             </Box>
-          </FormControl>
-          {/* Notes Form */}
-          <FormControl mb={4}>
+          </FormControl> */}
+        
+          {/* <FormControl mb={4}>
             <FormLabel paddingBottom={15} fontSize={"18px"} fontWeight={500}>
               Catatan
             </FormLabel>
@@ -510,10 +510,10 @@ const Page = () => {
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
             />
-          </FormControl>
+          </FormControl> */}
         </Box>
         {/* Div Kanan (30%) */}
-        <Box w="30%" position="sticky" top={10}>
+        {/* <Box w="30%" position="sticky" top={10}>
           <Box
             borderWidth={1}
             borderRadius="21px"
@@ -637,7 +637,7 @@ const Page = () => {
               </Link>
             </div>
           </Box>
-        </Box>
+        </Box> */}
       </div>
 
       {/* ini desktop yang di atas mobile */}
