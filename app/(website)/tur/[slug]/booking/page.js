@@ -321,52 +321,52 @@ const Page = () => {
             </FormControl>
 
             <Box paddingBlock={15} w="100%">
-            <Box
-              borderWidth={1}
-              borderRadius="21px"
-              borderColor={"#00429B"}
-              p={4}
-              boxShadow="md"
-            >
-              <Text className="text-xl font-bold pb-5 px-8 pt-4">
-                Data Pemesanan
-              </Text>
-              <div className="p-6 flex flex-col gap-6">
-                <FormControl>
-                  <Input
-                    placeholder="Nama Lengkap"
-                    className="border rounded-md text-sm border-gray-200 w-full py-3 px-5"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    size="md"
-                    variant="outline"
-                  />
-                </FormControl>
+              <Box
+                borderWidth={0.5}
+                borderRadius="21px"
+                borderColor={"#33333333"}
+                p={4}
+                boxShadow="md"
+              >
+                <Text className="text-xl font-bold pb-5 px-8 pt-4">
+                  Data Pemesanan
+                </Text>
+                <div className="p-6 flex flex-col gap-6">
+                  <FormControl>
+                    <Input
+                      placeholder="Nama Lengkap"
+                      className="border rounded-md text-sm border-gray-200 w-full py-3 px-5"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      size="md"
+                      variant="outline"
+                    />
+                  </FormControl>
 
-                <FormControl>
-                  <Input
-                    placeholder="No. WhatsApp"
-                    className="border rounded-md border-gray-200 w-full py-3 text-sm px-5"
-                    value={whatsapp}
-                    onChange={(e) => setWhatsapp(e.target.value)}
-                    size="md"
-                    variant="outline"
-                  />
-                </FormControl>
+                  <FormControl>
+                    <Input
+                      placeholder="No. WhatsApp"
+                      className="border rounded-md border-gray-200 w-full py-3 text-sm px-5"
+                      value={whatsapp}
+                      onChange={(e) => setWhatsapp(e.target.value)}
+                      size="md"
+                      variant="outline"
+                    />
+                  </FormControl>
 
-                <FormControl>
-                  <Input
-                    placeholder="Email"
-                    className="border rounded-md border-gray-200 w-full py-3 text-sm px-5"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    size="md"
-                    variant="outline"
-                  />
-                </FormControl>
-              </div>
+                  <FormControl>
+                    <Input
+                      placeholder="Email"
+                      className="border rounded-md border-gray-200 w-full py-3 text-sm px-5"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      size="md"
+                      variant="outline"
+                    />
+                  </FormControl>
+                </div>
+              </Box>
             </Box>
-          </Box>
 
             {/* Notes Form */}
             <FormControl mb={4}>
@@ -501,7 +501,6 @@ const Page = () => {
                 <div className="flex justify-between pb-8">
                   <Text className="text-lg font-bold">Total Tagihan</Text>
                   <Text className="text-lg font-bold">
-                   
                     {formatCurrency(finalPrice)}
                   </Text>
                 </div>
@@ -549,7 +548,7 @@ const Page = () => {
               </div>
             </Box>
           </FormControl> */}
-        
+
           {/* <FormControl mb={4}>
             <FormLabel paddingBottom={15} fontSize={"18px"} fontWeight={500}>
               Catatan
@@ -924,52 +923,52 @@ const Page = () => {
             </FormControl>
 
             <Box paddingBottom={25} w="100%">
-            <Box
-              borderWidth={1}
-              borderRadius="21px"
-              borderColor={"#00429B"}
-              p={4}
-              boxShadow="md"
-            >
-              <Text className="text-xl font-bold pb-5 px-8 pt-4">
-                Data Pemesanan
-              </Text>
-              <div className="p-6 flex flex-col gap-6">
-                <FormControl>
-                  <Input
-                    placeholder="Nama Lengkap"
-                    className="border rounded-md text-sm border-gray-200 w-full py-3 px-5"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    size="md"
-                    variant="outline"
-                  />
-                </FormControl>
+              <Box
+                borderWidth={0.5}
+                borderRadius="21px"
+                borderColor={"#33333333"}
+                p={4}
+                boxShadow="md"
+              >
+                <Text className="text-xl font-bold pb-5 px-8 pt-4">
+                  Data Pemesanan
+                </Text>
+                <div className="p-6 flex flex-col gap-6">
+                  <FormControl>
+                    <Input
+                      placeholder="Nama Lengkap"
+                      className="border rounded-md text-sm border-gray-200 w-full py-3 px-5"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      size="md"
+                      variant="outline"
+                    />
+                  </FormControl>
 
-                <FormControl>
-                  <Input
-                    placeholder="No. WhatsApp"
-                    className="border rounded-md border-gray-200 w-full py-3 text-sm px-5"
-                    value={whatsapp}
-                    onChange={(e) => setWhatsapp(e.target.value)}
-                    size="md"
-                    variant="outline"
-                  />
-                </FormControl>
+                  <FormControl>
+                    <Input
+                      placeholder="No. WhatsApp"
+                      className="border rounded-md border-gray-200 w-full py-3 text-sm px-5"
+                      value={whatsapp}
+                      onChange={(e) => setWhatsapp(e.target.value)}
+                      size="md"
+                      variant="outline"
+                    />
+                  </FormControl>
 
-                <FormControl>
-                  <Input
-                    placeholder="Email"
-                    className="border rounded-md border-gray-200 w-full py-3 text-sm px-5"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    size="md"
-                    variant="outline"
-                  />
-                </FormControl>
-              </div>
+                  <FormControl>
+                    <Input
+                      placeholder="Email"
+                      className="border rounded-md border-gray-200 w-full py-3 text-sm px-5"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      size="md"
+                      variant="outline"
+                    />
+                  </FormControl>
+                </div>
+              </Box>
             </Box>
-          </Box>
 
             {/* Notes Form */}
             <FormControl mb={4}>
